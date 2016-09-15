@@ -1,9 +1,10 @@
 <?php
 defined('_JEXEC') or die('Restricted access');
 
-/*
-* A payment plugin called "example". This is the main file of the plugin.
-*/
+//Load the Plugin language file out of the administration
+$lang = JFactory::getLanguage();
+$lang->load('plg_hikashop_HikaBackPriceChart', JPATH_ADMINISTRATOR);
+
 
 // You need to extend from the hikashopPaymentPlugin class which already define lots of functions in order to simplify your work
 class plgHikashopHikaBackPriceChart extends JPlugin
@@ -11,6 +12,13 @@ class plgHikashopHikaBackPriceChart extends JPlugin
 	
 function onHikashopAfterDisplayView(&$view) {
 		if (JRequest::getVar('option')==='com_hikashop' AND JRequest::getVar('ctrl')==='product' AND JRequest::getVar('task')==='show') {
+
+				JHtml::script('https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.2.2/Chart.bundle.js'); 
+				JHtml::script('http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js'); 
+				JHtml::script('./jquery.slModal.js'); 
+				JHtml::script(JURI::root().'plugins/hikashop/HikaBackPriceChart/jquery.slModal.js'); 
+				JHtml::stylesheet(JURI::root().'plugins/hikashop/HikaBackPriceChart/jquery.slModal.css'); 
+				JHtml::stylesheet('https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css');
 
 		if($view->getName() == 'product') {
 
@@ -26,12 +34,7 @@ function onHikashopAfterDisplayView(&$view) {
 				if (!empty($priceparams)) {
 					$chrtlinePriceHikashop = $view->escape($view->element->$priceparams);
 				} 
-				JHtml::script('https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.2.2/Chart.bundle.js');
-				JHtml::script('http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js');
-				JHtml::script('./jquery.slModal.js');
-				JHtml::script(JURI::root().'plugins/hikashop/HikaBackPriceChart/jquery.slModal.js');
-				JHtml::stylesheet(JURI::root().'plugins/hikashop/HikaBackPriceChart/jquery.slModal.css');
-				JHtml::stylesheet('https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css');
+				
 
     	
 				    	$document = JFactory::getDocument();
@@ -39,7 +42,7 @@ function onHikashopAfterDisplayView(&$view) {
 					 	$().slModal() 
 					');
 
-					echo '<a data-modal="searchBox" class="pure-button button-success"><i class="fa fa-bar-chart-o" aria-hidden="true"></i> نمودار قیمت </a>';
+					echo '<a data-modal="searchBox" class="pure-button button-success"><i class="fa fa-bar-chart-o" aria-hidden="true"></i> '.JText::_('PLG_HIKABACKPRICECHART_HIKASHOP_PRICE_CHART').' </a>';
 					
 					echo '<div id="searchBox" class="slModal ">';
 					          	echo '<fieldset>';
@@ -60,7 +63,7 @@ function onHikashopAfterDisplayView(&$view) {
 						    labels: [$monthsparams],
 						    datasets: [
 						        {
-						            label: 'نمودار قیمت',
+						            label: '".JText::_('PLG_HIKABACKPRICECHART_HIKASHOP_PRICE_CHART')."',
 						            fill: false,
 						            lineTension: 0.1,
 						            backgroundColor: 'rgba(75,192,192,0.4)',
