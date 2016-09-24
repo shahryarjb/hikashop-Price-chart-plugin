@@ -7,7 +7,7 @@
 	<license>GPL License</license>
 	<authorEmail>info@trangell.com</authorEmail>
 	<authorUrl>https://trangell.com</authorUrl>
-	<version>0.0.2</version>
+	<version>0.0.3</version>
 	<description>hikashop Price chart plugin | https://trangell.com</description>
 	<files>
 		<filename plugin="HikaBackPriceChart">HikaBackPriceChart.php</filename>

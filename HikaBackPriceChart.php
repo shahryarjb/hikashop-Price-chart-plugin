@@ -1,6 +1,6 @@
 <?php
 defined('_JEXEC') or die('Restricted access');
-
+//https://trangell.com
 //Load the Plugin language file out of the administration
 $lang = JFactory::getLanguage();
 $lang->load('plg_hikashop_HikaBackPriceChart', JPATH_ADMINISTRATOR);
@@ -15,10 +15,10 @@ function onHikashopAfterDisplayView(&$view) {
 
 				JHtml::script('https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.2.2/Chart.bundle.js'); 
 				JHtml::script('http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js'); 
-				// JHtml::script('./jquery.slModal.js'); 
 				JHtml::script(JURI::root().'plugins/hikashop/HikaBackPriceChart/jquery.slModal.js'); 
 				JHtml::stylesheet(JURI::root().'plugins/hikashop/HikaBackPriceChart/jquery.slModal.css'); 
 				JHtml::stylesheet('https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css');
+
 
 		if($view->getName() == 'product') {
 
