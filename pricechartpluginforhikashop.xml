@@ -10,22 +10,21 @@
 	<version>0.0.6</version>
 	<description>hikashop Price chart plugin (Price Chart Plugin for Hikashop )| https://trangell.com</description>
 	<files>
-		<filename plugin="hikabackpricechart">hikabackpricechart.php</filename>
+		<filename plugin="pricechartpluginforhikashop">pricechartpluginforhikashop.php</filename>
 		<filename>index.html</filename>
 		<filename>jquery.slModal.js</filename>
 		<filename>jquery.slModal.css</filename>
 		<folder>language</folder>
 	</files>
 	<languages folder="language">
-		<language tag="en-GB">en-GB.plg_hikashop_hikabackpricechart.ini</language>
-		<language tag="en-GB">en-GB.plg_hikashop_hikabackpricechart.sys.ini</language>
-		<language tag="fa-IR">fa-IR.plg_hikashop_hikabackpricechart.ini</language>
-		<language tag="fa-IR">fa-IR.plg_hikashop_hikabackpricechart.sys.ini</language>
+		<language tag="en-GB">en-GB.plg_pricechartpluginforhikashop.ini</language>
+		<language tag="en-GB">en-GB.plg_pricechartpluginforhikashop.sys.ini</language>
+		<language tag="fa-IR">fa-IR.plg_pricechartpluginforhikashop.ini</language>
+		<language tag="fa-IR">fa-IR.plg_pricechartpluginforhikashop.sys.ini</language>
 	</languages>
 	<updateservers>
-        <server type="extension" priority="1" name="hikabackpricechart">https://trangell.com/ext/updates/plugin/plg_hikabackpricechart.xml</server>
+        <server type="extension" priority="1" name="pricechartpluginforhikashop">https://trangell.com/ext/updates/plugin/plg_pricechartpluginforhikashop.xml</server>
     </updateservers>
-    
     <config>
 		<fields name="params">
 			<fieldset name="basic">
@@ -45,7 +44,6 @@
 
 				/>
 			</fieldset>
-
 		</fields>
 	</config>
 </extension>

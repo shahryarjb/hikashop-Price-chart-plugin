@@ -4,11 +4,11 @@ defined('_JEXEC') or die('Restricted access');
 //https://trangell.com
 //Load the Plugin language file out of the administration
 $lang = JFactory::getLanguage();
-$lang->load('plg_hikashop_HikaBackPriceChart', JPATH_ADMINISTRATOR);
+$lang->load('plg_pricechartpluginforhikashop', JPATH_ADMINISTRATOR);
 
 
 // You need to extend from the hikashopPaymentPlugin class which already define lots of functions in order to simplify your work
-class plgHikashopHikaBackPriceChart extends JPlugin
+class plgHikashopPriceChartPluginForHikashop extends JPlugin
 {
 	
 function onHikashopAfterDisplayView(&$view) {
