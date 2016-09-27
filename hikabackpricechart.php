@@ -1,5 +1,6 @@
 <?php
 defined('_JEXEC') or die('Restricted access');
+ //@license   GNU/GPLv2 and later
 //https://trangell.com
 //Load the Plugin language file out of the administration
 $lang = JFactory::getLanguage();
@@ -11,7 +12,10 @@ class plgHikashopHikaBackPriceChart extends JPlugin
 {
 	
 function onHikashopAfterDisplayView(&$view) {
-		if (JRequest::getVar('option')==='com_hikashop' AND JRequest::getVar('ctrl')==='product' AND JRequest::getVar('task')==='show') {
+
+		$cheak = JFactory::getApplication()->input;
+
+		if ($cheak->get('option') == 'com_hikashop' AND $cheak->get('ctrl') == 'product' AND $cheak->get('task') == 'show') {
 
 				JHtml::script('https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.2.2/Chart.bundle.js'); 
 				JHtml::script('http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js'); 
