@@ -19,8 +19,8 @@ function onHikashopAfterDisplayView(&$view) {
 
 				JHtml::script('https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.2.2/Chart.bundle.js'); 
 				JHtml::script('http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js'); 
-				JHtml::script(JURI::root().'plugins/hikashop/HikaBackPriceChart/jquery.slModal.js'); 
-				JHtml::stylesheet(JURI::root().'plugins/hikashop/HikaBackPriceChart/jquery.slModal.css'); 
+				JHtml::script(JURI::root().'plugins/hikashop/pricechartpluginforhikashop/jquery.slModal.js'); 
+				JHtml::stylesheet(JURI::root().'plugins/hikashop/pricechartpluginforhikashop/jquery.slModal.css'); 
 				JHtml::stylesheet('https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css');
 
 
